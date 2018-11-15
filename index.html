@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <style>
+        .flexbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            margin: 0;
+            min-height: 24em;
+        }
+
+        .flexbox-item {
+            max-width: 50%;
+        }
+
+        .fixed {
+            flex: none;
+            max-width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexbox-container">
+        <div class="flexbox-item fixed">
+            <div class="card">
+                <div class="card-header">
+                    Introduction to Classical Music: Randomizer
+                </div>
+                <div class="card-body">
+                    <div id="hint" hidden=true>
+                        <h5 class="card-title">Playing: <span id=trackName></span></h5>
+                        <p class="card-text">Composed by: <span id=composer></span></p>
+                    </div>
+                    <h4>Status: <span id=status>Loading</span></h4>
+                    <h5>Time: <span id=countdown>60</span></h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter song name"
+                                autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="composerName">Composer</label>
+                            <input type="text" class="form-control" id="composerName" placeholder="Enter composer name">
+                        </div>
+                        <button class="btn btn-primary" onclick="checkAnswer()">Submit</button>
+                        <button class="btn btn-primary" onclick="nextVideo()">next</button>
+                        <button class="btn btn-primary" onclick="toggleHint()">Show/Hide Music info</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="player" style="width: 0%;height: 0%;"></div>
+    <!-- <div id="player"></div> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
