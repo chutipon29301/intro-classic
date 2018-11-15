@@ -123,11 +123,6 @@ const finalQuestion = [{
     name: "Also Sprach Zarathustra",
     startTime: 11,
 },{
-    videoId: "IFPwm0e_K98",
-    composer: "R.struss",
-    name: "Also Sprach Zarathustra",
-    startTime: 11,
-},{
     videoId: "pxZgPa1-kyE",
     composer: "Xian Xinghai",
     name: "Yellow River Piano Concerto",
